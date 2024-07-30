@@ -1,0 +1,39 @@
+<div *ngIf="simulation">
+  <h2>{{ simulation.simulationName }}</h2>
+  <button mat-raised-button color="primary" (click)="editSimulation()">Edit Simulation</button>
+  
+  <!-- Chart -->
+  <div style="display: block;">
+    <canvas baseChart
+            [data]="lineChartData"
+            [options]="lineChartOptions"
+            chartType="line">
+    </canvas>
+  </div>
+
+  <!-- Table -->
+  <table mat-table [dataSource]="dailyData" class="mat-elevation-z8">
+    <ng-container matColumnDef="day">
+      <th mat-header-cell *matHeaderCellDef> Day </th>
+      <td mat-cell *matCellDef="let data"> {{data.day}} </td>
+    </ng-container>
+    <ng-container matColumnDef="infected">
+      <th mat-header-cell *matHeaderCellDef> Pi </th>
+      <td mat-cell *matCellDef="let data"> {{data.infected}} </td>
+    </ng-container>
+    <ng-container matColumnDef="susceptible">
+      <th mat-header-cell *matHeaderCellDef> Pv </th>
+      <td mat-cell *matCellDef="let data"> {{data.susceptible}} </td>
+    </ng-container>
+    <ng-container matColumnDef="deceased">
+      <th mat-header-cell *matHeaderCellDef> Pm </th>
+      <td mat-cell *matCellDef="let data"> {{data.deceased}} </td>
+    </ng-container>
+    <ng-container matColumnDef="recovered">
+      <th mat-header-cell *matHeaderCellDef> Pr </th>
+      <td mat-cell *matCellDef="let data"> {{data.recovered}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="['day', 'infected', 'susceptible', 'deceased', 'recovered']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['day', 'infected', 'susceptible', 'deceased', 'recovered'];"></tr>
+  </table>
+</div>

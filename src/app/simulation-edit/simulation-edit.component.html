@@ -1,0 +1,35 @@
+<form [formGroup]="simulationForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Simulation Name</mat-label>
+    <input matInput formControlName="simulationName" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Population Size</mat-label>
+    <input matInput type="number" formControlName="populationSize" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Initial Infected</mat-label>
+    <input matInput type="number" formControlName="initialInfected" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Infection Rate</mat-label>
+    <input matInput type="number" formControlName="infectionRate" step="0.01" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Mortality Rate</mat-label>
+    <input matInput type="number" formControlName="mortalityRate" step="0.01" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Infection Duration</mat-label>
+    <input matInput type="number" formControlName="infectionDuration" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Death Duration</mat-label>
+    <input matInput type="number" formControlName="deathDuration" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Simulation Duration</mat-label>
+    <input matInput type="number" formControlName="simulationDuration" required>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Save</button>
+</form>
