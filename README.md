@@ -19,7 +19,7 @@ Before you begin, ensure you have met the following requirements:
 - Angular CLI (v12.x or later)
 - The backend part of the application needs to be downloaded for the application to work properly. Download this repository:
 
-https://github.com/matpia98/EpidemicSimulator.git
+https://github.com/matpia98/EpidemicSimulator-backend.git
 
 Clone this repository and then follow the instructions in the README.me file
 
@@ -28,13 +28,13 @@ Clone this repository and then follow the instructions in the README.me file
 1. Clone the repository:
 
 ```git
-git clone https://github.com/your-username/epidemic-simulator-frontend.git
+git clone https://github.com/matpia98/EpidemicSimulator-frontend.git
 ```
 
 2. Navigate to the project directory:
    
 ```node
-cd epidemic-simulator-frontend
+cd EpidemicSimulator-frontend
 ```
 
 3. Install the dependencies:
@@ -128,4 +128,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) f
 ## Contact
 
 - Developer: [Mateusz Piasecki](https://github.com/matpia98)
-- Project Link: [https://github.com/matpia98/epidemic-simulator-frontend](https://github.com/matpia98/epidemic-simulator-frontend)
+- Project Link: https://github.com/matpia98/EpidemicSimulator-frontend
