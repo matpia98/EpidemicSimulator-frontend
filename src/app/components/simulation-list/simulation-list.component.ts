@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SimulationService } from '../simulation.service';
-import { Simulation } from '../simulation.model';
+import { SimulationService } from '../../services/simulation.service';
+import { Simulation } from '../../models/simulation.model';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
@@ -11,19 +11,28 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './simulation-list.component.html',
   styleUrls: ['./simulation-list.component.css'],
   standalone: true,
-  imports: [
-    CommonModule,
-    MatTableModule,
-    MatButtonModule
-  ]
+  imports: [CommonModule, MatTableModule, MatButtonModule],
 })
 export class SimulationListComponent implements OnInit {
-
   simulations: Simulation[] = [];
-  displayedColumns: string[] = ['id', 'simulationName', 'populationSize', 'initialInfected', 'infectionRate', 'mortalityRate', 'infectionDuration', 'deathDuration', 'simulationDuration', 'actions'];
+  displayedColumns: string[] = [
+    'id',
+    'simulationName',
+    'populationSize',
+    'initialInfected',
+    'infectionRate',
+    'mortalityRate',
+    'infectionDuration',
+    'deathDuration',
+    'simulationDuration',
+    'actions',
+  ];
   showSimulationButtons = false;
 
-  constructor(private simulationService: SimulationService, private router: Router) { }
+  constructor(
+    private simulationService: SimulationService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.fetchSimulations();
@@ -37,7 +46,7 @@ export class SimulationListComponent implements OnInit {
       },
       error: (error) => {
         console.error('Error fetching simulations:', error);
-      }
+      },
     });
   }
 
@@ -57,7 +66,10 @@ export class SimulationListComponent implements OnInit {
 
   showSimulations() {
     this.showSimulationButtons = !this.showSimulationButtons;
-    console.log('Show Simulations button clicked. showSimulationButtons:', this.showSimulationButtons); // Debugging statement
+    console.log(
+      'Show Simulations button clicked. showSimulationButtons:',
+      this.showSimulationButtons
+    ); // Debugging statement
     if (this.showSimulationButtons) {
       this.fetchSimulations();
     }

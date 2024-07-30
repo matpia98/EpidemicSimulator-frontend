@@ -11,9 +11,9 @@ import { MatInputModule } from '@angular/material/input';
 import { RouterModule, Routes } from '@angular/router';
 import { BaseChartDirective } from 'ng2-charts';  // Import NgChartsModule
 
-import { SimulationListComponent } from './app/simulation-list/simulation-list.component';
-import { SimulationDetailComponent } from './app/simulation-detail/simulation-detail.component';
-import { SimulationEditComponent } from './app/simulation-edit/simulation-edit.component';
+import { SimulationListComponent } from './app/components/simulation-list/simulation-list.component'; 
+import { SimulationDetailComponent } from './app/components/simulation-detail/simulation-detail.component';
+import { SimulationEditComponent } from './app/components/simulation-edit/simulation-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/simulations', pathMatch: 'full' },

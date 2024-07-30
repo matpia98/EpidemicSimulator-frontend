@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SimulationService } from '../simulation.service';
-import { Simulation, DailyData } from '../simulation.model';
+import { SimulationService } from '../../services/simulation.service';
+import { Simulation, DailyData } from '../../models/simulation.model';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';

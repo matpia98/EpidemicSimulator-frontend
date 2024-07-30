@@ -10,9 +10,9 @@ import { MatInputModule } from '@angular/material/input';
 import { RouterModule, Routes } from '@angular/router';
 import { BaseChartDirective  } from 'ng2-charts';
 
-import { SimulationListComponent } from './simulation-list/simulation-list.component';
-import { SimulationDetailComponent } from './simulation-detail/simulation-detail.component';
-import { SimulationEditComponent } from './simulation-edit/simulation-edit.component';
+import { SimulationListComponent } from './components/simulation-list/simulation-list.component'; 
+import { SimulationDetailComponent } from './components/simulation-detail/simulation-detail.component'; 
+import { SimulationEditComponent } from './components/simulation-edit/simulation-edit.component'; 
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
