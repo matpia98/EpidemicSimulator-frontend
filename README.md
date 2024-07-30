@@ -1,27 +1,131 @@
-# EpidemicSimulator
+# Epidemic Simulator - Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+This is the frontend application for the Epidemic Simulator project. It's built using Angular and provides a user interface for creating, viewing, and managing epidemic simulations.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- View list of simulations
+- Create new simulations
+- View detailed simulation results including charts
+- Edit existing simulations
+- Delete simulations
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Before you begin, ensure you have met the following requirements:
 
-## Build
+- Node.js (v14.x or later)
+- npm (v6.x or later)
+- Angular CLI (v12.x or later)
+- The backend part of the application needs to be downloaded for the application to work properly. Download this repository:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+https://github.com/matpia98/EpidemicSimulator.git
 
-## Running unit tests
+Clone this repository and then follow the instructions in the README.me file
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
 
-## Running end-to-end tests
+1. Clone the repository:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```git
+git clone https://github.com/your-username/epidemic-simulator-frontend.git
+```
 
-## Further help
+2. Navigate to the project directory:
+   
+```node
+cd epidemic-simulator-frontend
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3. Install the dependencies:
+
+```node
+npm install
+```
+
+## Running the Application
+
+To run the application in development mode:
+
+```node
+ng serve
+```
+
+Navigate to `http://localhost:4200/` in your web browser. The application will automatically reload if you change any of the source files.
+
+
+## Project Structure
+
+- `src/app/components/` - Contains all the Angular components
+- `src/app/services/` - Contains services for API communication
+- `src/app/models/` - Contains TypeScript interfaces for data models
+
+## Key Components
+
+- `simulation-list.component` - Displays a list of all simulations
+- `simulation-detail.component` - Shows detailed view of a single simulation
+- `simulation-edit.component` - Form for editing simulations
+
+## Services
+
+- `simulation.service` - Handles API calls to the backend for CRUD operations on simulations
+
+## Models
+
+The application uses the following key data models:
+
+- `Simulation` - Represents a single epidemic simulation with properties such as:
+  - `id`: Unique identifier for the simulation
+  - `simulationName`: Name of the simulation
+  - `populationSize`: Total population size
+  - `initialInfected`: Number of initially infected individuals
+  - `infectionRate`: Rate of infection spread
+  - `mortalityRate`: Rate of mortality among infected
+  - `infectionDuration`: Duration of the infectious period
+  - `deathDuration`: Time from infection to potential death
+  - `simulationDuration`: Total duration of the simulation
+
+- `DailyData` - Represents the daily statistics of a simulation:
+  - `day`: The day number
+  - `infected`: Number of infected individuals
+  - `susceptible`: Number of susceptible individuals
+  - `deceased`: Number of deceased individuals
+  - `recovered`: Number of recovered individuals
+
+
+## Styling
+
+This project uses Angular Material for UI components
+
+## Testing
+
+Run unit tests with:
+
+```node
+ng test
+```
+
+Run end-to-end tests with:
+
+```node
+ng e2e
+```
+
+## Contributing
+
+Contributions to the Epidemic Simulator Frontend are welcome. Please follow these steps:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/SomeFeature`)
+3. Commit your changes (`git commit -m 'Add some /SomeFeature'`)
+4. Push to the branch (`git push origin feature/SomeFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+
+## Contact
+
+- Developer: [Mateusz Piasecki](https://github.com/matpia98)
+- Project Link: [https://github.com/matpia98/epidemic-simulator-frontend](https://github.com/matpia98/epidemic-simulator-frontend)
